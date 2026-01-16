@@ -41,7 +41,7 @@ app.get('/stream', (req, res) => {
 		// Windows: Use DirectShow
 		ffmpegArgs = [
 		'-f', 'dshow',
-		'-i', 'video=HD Pro Webcam C920', // find using ffmpeg -list_devices true -
+		'-i', 'video=HD Pro Webcam C920', // find using ffmpeg -list_devices true -i dummy
 		'-f', 'mjpeg',
 		'-q:v', '5',
 		'-r', '60',  // 60fps
@@ -123,3 +123,4 @@ app.listen(PORT, () => {
     }
 
 });
+
