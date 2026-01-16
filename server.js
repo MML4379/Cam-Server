@@ -12,7 +12,7 @@ const isLinux = process.platform === 'linux';
 // Store active stream process
 let streamProcess = null;
 
-// Serve a simple HTML page to view the stream
+// Serve a simple HTML page (gives 200 code ONLY)
 app.get('/', (req, res) => {
 	res.send(`
 		<h1>Camera Server</h1>
@@ -121,4 +121,5 @@ app.listen(PORT, () => {
     } else if (isLinux) {
       	console.log('Linux: Check /dev/video* for available camera devices');
     }
+
 });
